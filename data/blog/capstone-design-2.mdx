@@ -1,0 +1,52 @@
+---
+title: 실시간 채팅 방식 찬반 토론 게임 구현 (2) - 설계 단계
+date: '2024-06-23'
+tags: ['project']
+draft: true
+summary: '웹 기반의 실시간 채팅 방식 찬반 토론 게임을 구현하는 과정입니다.'
+---
+## Intro
+- 이전 포스트   
+[실시간 채팅 방식 찬반 토론 게임 구현 (1) - 기획 단계](/blog/capstone-design-1)
+
+프로젝트 기획에 이어서 설계를 하는 과정입니다.     
+~~기획, 설계를 제대로 해본적이 없어서 부족한 부분이 많습니다 이점 양해부탁드립니다...~~
+
+<TOCInline toc={props.toc} exclude="Intro" />
+
+## 사용할 라이브러리
+- ReactJS
+  - 웹 프론트엔드 구성을 위해 사용
+- Gemini API
+  - 토론 내용을 평가하고 점수를 부여하기 위해 사용
+- Supabase API
+  - 백엔드를 간단히 구현할 수 있는 API
+  - 실시간 통신 및 DB 사용
+
+## 시스템 설계도
+### 전체
+![](/static/images/posts/capstone-design-2/sys-diagram_all.png)
+
+### 채팅방 생성 및 참여
+#### 채팅방 생성 시
+![](/static/images/posts/capstone-design-2/sys-diagram_create-chat.png)
+#### 채팅방 접속 시
+![](/static/images/posts/capstone-design-2/sys-diagram_join-chat.png)
+
+### 주제 선정
+#### 호스트의 경우
+![](/static/images/posts/capstone-design-2/sys-diagram_topic-host.png)
+#### 참가자의 경우
+![](/static/images/posts/capstone-design-2/sys-diagram_topic-part.png)
+
+### 토론 진행
+#### 입론 단계
+![](/static/images/posts/capstone-design-2/sys-diagram_game-intro.png)
+#### 반론 단계
+![](/static/images/posts/capstone-design-2/sys-diagram_game-discuss.png)
+
+### 최종 평가
+#### 호스트의 경우
+![](/static/images/posts/capstone-design-2/sys-diagram_final-host.png)
+#### 참가자의 경우
+![](/static/images/posts/capstone-design-2/sys-diagram_final-part.png)
